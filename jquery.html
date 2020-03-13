@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/bootstrap.css">
+   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+   <script type="text/javascript" src="js/funcoesJquery.js"></script>
+   <title>Fixando jQuery</title>
+</head>
+
+<body>
+   <div class="container-fluid">
+      <h1>Fixando jQuery</h1>
+      <form class="highlight">
+         <div class="form-row">
+            <div class="form-group col-md-6">
+               <label for="nome">Nome:</label>
+               <input type="text" class="form-control" id="nome" placeholder="Digite o nome">
+            </div>
+            <div class="form-group col-md-6">
+               <label for="idade">Idade:</label>
+               <input type="number" class="form-control" id="idade">
+            </div>
+
+            <div class="col-md-12 mb-3">
+               <label for="endereco">Endereço:</label>
+               <div class="input-group">
+                  <div class="input-group-prepend">
+                     <span class="input-group-text" id="imgEndereco">
+                        <svg class="bi bi-map" width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor"
+                           xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd"
+                              d="M17.817 2.613A.5.5 0 0118 3v13a.5.5 0 01-.402.49l-5 1a.502.502 0 01-.196 0L7.5 16.51l-4.902.98A.5.5 0 012 17V4a.5.5 0 01.402-.49l5-1a.5.5 0 01.196 0l4.902.98 4.902-.98a.5.5 0 01.415.103zM12 4.41l-4-.8v11.98l4 .8V4.41zm1 11.98l4-.8V3.61l-4 .8v11.98zm-6-.8V3.61l-4 .8v11.98l4-.8z"
+                              clip-rule="evenodd"></path>
+                        </svg>
+                     </span>
+                  </div>
+                  <input type="text" class="form-control" id="endereco" aria-describedby="imgEndereco" required disabled>
+               </div>
+            </div>
+         </div>
+         <a href="javascript: buscaDadosForm()"><div class="btn btn-primary">Javascript puro</div></a>         
+         <div class="btn btn-success" id="btnJquery">JQuery</div>         
+         <input type="reset" name="reset" value="Limpar" class="btn btn-danger">
+      </form>
+   </div>
+</body>
+
+</html>
