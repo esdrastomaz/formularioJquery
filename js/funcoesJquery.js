@@ -8,4 +8,9 @@ $(document).ready(function(){
         alert('O nome digitdado em jQuery é: ' + $("#nome").val());
 
     });
+
+    $("#btnMudarClass").click(function(){
+        $("#idade").addClass
+
+    });
 });
