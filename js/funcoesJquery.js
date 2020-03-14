@@ -1,6 +1,21 @@
 function buscaDadosForm(){
     var txtNome = document.getElementById("nome").value;
-    alert('O nome digitado é: ' + txtNome);
+    if(txtNome.length == 0){
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Campo nome Vazio!',        
+        });
+    }
+    else{
+        Swal.fire({
+            icon: 'success',
+            title: 'success',
+            text: 'Campo nome preenchido!',        
+        });
+    }
+        
+    
 }
 
 $(document).ready(function(){
@@ -10,7 +25,32 @@ $(document).ready(function(){
     });
 
     $("#btnMudarClass").click(function(){
-        $("#idade").addClass
-
+        var classe = $("#idade").attr("class");
+        if(classe.indexOf("bg-danger") > 0){
+            $("#idade").removeClass("bg-danger");
+            $("#idade").removeClass("text-white");
+        }
+        else{
+            $("#idade").addClass('bg-danger text-white');
+        }      
     });
+
+    //exibir modal
+
+    $("#imgEndereco").click(function(){
+        $("#modalEndereco").modal();
+    });
+
+    //lançar no endereço os dados do modal
+
+    $("#btnGravarModal").click(function(){
+        var tipo = $("#cmbTipo").val();
+        var nome = $("#txtLogradouro").val();
+        var numero = $("#txtNumero").val();
+        var endereco = tipo + ' ' + nome + ', ' + numero;
+        
+        $("#endereco").val(endereco);
+        $("#modalEndereco").modal("toggle");
+    });
+    
 });
